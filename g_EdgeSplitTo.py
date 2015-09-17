@@ -17,7 +17,7 @@ objs = (
 '''
 for o in scene.objects:
     if o.type == 'MESH' and 'EdgeSplit' in o.modifiers:
-        script += "(bpy.context.scene.objects['%s'], %f),\n" % (o.name, o.modifiers['EdgeSplit'].split_angle)
+        script += "(scene.objects['%s'], %f),\n" % (o.name, o.modifiers['EdgeSplit'].split_angle)
 script += ''')
 for o in objs:
     scene.objects.active = o[0]
