@@ -53,54 +53,6 @@ bpy.data.objects['LAMP_0_023'].hide_render = True
 bpy.data.objects['LAMP_0_024'].hide_render = True
 bpy.data.objects['LAMP_0_025'].hide_render = True
 
-# Edge split modifiers
-objs = (
-(scene.objects['MREA_2398E906_136'], 0.523599),
-(scene.objects['MREA_2398E906_135'], 0.523599),
-(scene.objects['MREA_2398E906_134'], 0.523599),
-(scene.objects['MREA_2398E906_133'], 0.523599),
-(scene.objects['MREA_2398E906_132'], 0.523599),
-(scene.objects['MREA_2398E906_131'], 0.532674),
-(scene.objects['MREA_2398E906_130'], 0.674046),
-(scene.objects['MREA_2398E906_129'], 0.523599),
-(scene.objects['MREA_2398E906_128'], 0.523599),
-(scene.objects['MREA_2398E906_127'], 0.523599),
-(scene.objects['MREA_2398E906_126'], 0.523599),
-(scene.objects['MREA_2398E906_125'], 0.523599),
-(scene.objects['MREA_2398E906_124'], 0.523599),
-(scene.objects['MREA_2398E906_123'], 0.569676),
-(scene.objects['MREA_2398E906_122'], 0.568279),
-(scene.objects['MREA_2398E906_118'], 0.629017),
-(scene.objects['MREA_2398E906_117'], 0.523599),
-(scene.objects['MREA_2398E906_116'], 0.523599),
-(scene.objects['MREA_2398E906_115'], 0.523599),
-(scene.objects['MREA_2398E906_114'], 0.523599),
-(scene.objects['MREA_2398E906_085'], 0.577355),
-(scene.objects['MREA_2398E906_084'], 0.770214),
-(scene.objects['MREA_2398E906_083'], 0.796394),
-(scene.objects['MREA_2398E906_082'], 0.523599),
-(scene.objects['MREA_2398E906_081'], 0.816640),
-(scene.objects['MREA_2398E906_080'], 0.859400),
-(scene.objects['MREA_2398E906_079'], 0.812800),
-(scene.objects['MREA_2398E906_078'], 0.814894),
-(scene.objects['MREA_2398E906_077'], 0.837758),
-(scene.objects['MREA_2398E906_064'], 0.523599),
-(scene.objects['MREA_2398E906_063'], 0.798488),
-(scene.objects['MREA_2398E906_062'], 0.291121),
-(scene.objects['MREA_2398E906_060'], 0.523599),
-(scene.objects['MREA_2398E906_037'], 0.646470),
-(scene.objects['MREA_2398E906_013'], 0.523599),
-(scene.objects['MREA_2398E906_009'], 0.558505),
-(scene.objects['MREA_2398E906_008'], 0.558505),
-(scene.objects['MREA_2398E906_004'], 0.523599),
-(scene.objects['MREA_2398E906_001'], 0.648041),
-(scene.objects['MREA_2398E906_000'], 0.523599),
-)
-for o in objs:
-    scene.objects.active = o[0]
-    bpy.ops.object.modifier_add(type='EDGE_SPLIT')
-    o[0].modifiers['EdgeSplit'].split_angle = o[1]
-
 # Save Forked File
 out_path = os.path.split(bpy.data.filepath)
 out_path = os.path.join(out_path[0], 'MREA_2398E906_cycles.blend')
